@@ -1,0 +1,32 @@
+credit-model-validator/
+├── data/
+│   ├── sample_loan_portfolio.csv       # Dataset sintético de empréstimos
+│   └── regulations/                    # Documentos regulatórios
+│       ├── bcb_resolution_303.pdf
+│       └── basel_ii_guidelines.pdf
+│
+├── notebooks/
+│   ├── 01_credit_risk_modeling.ipynb   # Modelagem PD/LGD/EAD
+│   ├── 02_model_validation.ipynb       # Validação BCB 303
+│   └── 03_rag_implementation.ipynb     # Sistema de consulta regulatória
+│
+├── src/
+│   ├── validation_framework/           # Módulo de validação
+│   │   ├── metrics_calculator.py       # KS, Gini, PSI
+│   │   ├── backtesting.py
+│   │   └── stability_analysis.py
+│   │
+│   ├── generative_ai/                  # IA Generativa
+│   │   ├── regulatory_rag.py           # Sistema RAG
+│   │   ├── prompt_engineering.py
+│   │   └── report_generator.py
+│   │
+│   └── app.py                          # Dashboard Streamlit
+│
+├── tests/                              # Testes automatizados
+│   ├── test_validation_metrics.py
+│   └── test_rag_system.py
+│
+├── requirements.txt                    # Dependências
+├── Dockerfile                          # Configuração de container
+└── README.md                           # Documentação completa
